@@ -21,7 +21,7 @@ steps:
     browserstackLocal: true
     bsLocalOptions: |
       {
-        "localIdentifier": "pipeline2"
+        "localIdentifier": "secondProject1"
       }
 - task: Bash@3
   inputs:
