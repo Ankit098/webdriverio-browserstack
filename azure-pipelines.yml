@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+- main
 
 pool:
   name: Default
@@ -19,9 +19,16 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'org2local'
     browserstackLocal: true
-    bsLocalOptions: '{"localIdentifier":"orgp1"}'
-  displayName: 'npm install and build'
+    bsLocalOptions: |
+      {
+        "localIdentifier": "org2p1"
+      }
+- task: Bash@3
+  inputs:
+    targetType: inline
+    script: 'sleep 10'
 
 - script: |
     npm install
+  displayName: 'npm install and build'
 - task: BrowserStackStopLocal@0
