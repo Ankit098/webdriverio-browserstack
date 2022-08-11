@@ -28,4 +28,4 @@ steps:
   
 - task: BrowserStackStopLocal@0
   inputs:
-    localIdentifier: 'abcdefgh-8-11'
+    localIdentifier: 'abcdefgh-0-11'
