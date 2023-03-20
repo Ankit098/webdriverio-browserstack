@@ -18,7 +18,7 @@ steps:
   
 - task: BrowserStackConfig@0
   inputs:
-    BrowserStackServiceEndPoint: 'eighthConnection'
+    BrowserStackServiceEndPoint: 'eightNew'
     browserstackLocal: true
     bsLocalOptions: '{"localIdentifier":"abcdefgh-8-11"}'
 
