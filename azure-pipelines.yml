@@ -13,10 +13,9 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '16.14.2'
   displayName: 'Install Node.js'
-  
-- task: BrowserStackStopLocal@0
+
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'prod_org_8'
