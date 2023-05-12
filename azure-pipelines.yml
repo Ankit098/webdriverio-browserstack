@@ -34,7 +34,7 @@ steps:
 
 - task: BrowserStackStopLocal@0
 
-- task: BrowserStackResults@1
+- task: BrowserStackResults@2
   inputs:
     browserstackProduct: 'automate'
 
