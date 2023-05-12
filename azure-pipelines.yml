@@ -23,8 +23,12 @@ steps:
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'prod_org_8'
-    # browserstackLocal: true
+    browserstackLocal: true
 
 - script: |
     npm install
   displayName: 'npm install'
+
+- task: BrowserStackResults@1
+  inputs:
+    browserstackProduct: 'automate'
