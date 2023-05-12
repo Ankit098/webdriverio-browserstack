@@ -12,7 +12,7 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '18.16.0'
   displayName: 'Install Node.js'
 
 - task: BrowserStackConfig@0
@@ -25,8 +25,8 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    npm run test
-  displayName: 'Running tests'
+    npm run local
+  displayName: 'Running'
 
 - task: BrowserStackStopLocal@0
 
