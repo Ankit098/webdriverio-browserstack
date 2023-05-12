@@ -28,6 +28,9 @@ steps:
     npm run test
   displayName: 'Running tests'
 
+- task: BrowserStackStopLocal@0
+
 - task: BrowserStackResults@1
   inputs:
     browserstackProduct: 'automate'
+
