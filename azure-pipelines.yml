@@ -25,6 +25,10 @@ steps:
   displayName: 'npm install'
 
 - script: |
+    node -v
+  displayName: 'node version'
+
+- script: |
     npm run local
   displayName: 'Running'
 
