@@ -8,8 +8,6 @@ trigger:
 
 pool:
   name: Default
-  # vmImage: ubuntu-latest
-
 
 steps:
 - task: NodeTool@0
@@ -25,6 +23,10 @@ steps:
 - script: |
     npm install
   displayName: 'npm install'
+
+- script: |
+    npm run test
+  displayName: 'Running tests'
 
 - task: BrowserStackResults@1
   inputs:
