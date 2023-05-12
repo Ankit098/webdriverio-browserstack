@@ -13,7 +13,7 @@ const localConfig = {
       browserName: 'chrome',
       browserVersion: 'latest',
       'bstack:options': {
-        buildName: 'browserstack-build-1',
+        buildName: process.env['BROWSERSTACK_BUILD_NAME'],
         source: 'webdriverio:sample-master:v1.0'
       }
     },
