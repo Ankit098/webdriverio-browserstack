@@ -12,10 +12,24 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '18.16.0'
   displayName: 'Install Node.js'
+
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'prod_org_8'
+    browserstackLocal: true
 
 - script: |
     npm install
-    npm run build
-  displayName: 'npm install and build'
+  displayName: 'npm install'
+
+- script: |
+    npm run local
+  displayName: 'Running'
+
+- task: BrowserStackStopLocal@0
+
+- task: BrowserStackResults@1
+  inputs:
+    browserstackProduct: 'automate'
