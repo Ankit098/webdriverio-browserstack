@@ -17,7 +17,7 @@ steps:
 
 - task: BrowserStackConfig@0
   inputs:
-    BrowserStackServiceEndPoint: 'prod_org_8'
+    BrowserStackServiceEndPoint: 'novbstack1'
     browserstackLocal: true
 
 - script: |
